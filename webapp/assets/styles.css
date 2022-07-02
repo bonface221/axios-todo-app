@@ -16,7 +16,13 @@
   height: 100vh;
   padding: 15px;
 }
-
+#form{
+  transition: linear 2s ease
+}
+.fa-times{
+  font-size: 2rem;
+  display: none;
+}
 .child-2 {
   width: 20px;
   height: 90vh;
