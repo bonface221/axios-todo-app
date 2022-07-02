@@ -55,7 +55,16 @@ const displayAllTodos = () => {
 				}
 			}
 		})
-		.catch((err) => console.log(err));
+		.catch((err) => {
+			todoList.innerHTML += `
+			<div class = "empty-todo">
+			<img src="./assets/images/nodata.png" alt="empty image" style="width: 50%;">
+			<br>
+			<span style="font-family: 'Fira Sans', sans-serif; font-size: 20px; font-weight: bold;">The server is Down please start the json server at localhost port 8000...</span>
+			<br>
+			</div>
+			`;
+		});
 };
 
 displayAllTodos();
