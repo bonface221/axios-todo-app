@@ -79,9 +79,9 @@ const addTodo = () => {
 			.post("http://localhost:8000/posts", { id, timestamp, body, status })
 			.then((res) => console.log(res.data))
 			.catch((err) => console.error(err));
-		idField.value = "";
-		timeField.value = "";
-		bodyField.value = "";
+		// idField.value = "";
+		// timeField.value = "";
+		// bodyField.value = "";
 		form.style.display = "none";
 		img.style.display = "block";
 		displayAllTodos();
@@ -132,6 +132,7 @@ const addNewTodo = () => {
 
 const deleteTodo = (itemId) => {
 	axios.delete(`http://localhost:8000/posts/${itemId}`);
+	displayAllTodos();
 };
 const closeAll = () => {
 	form.style.display = "none";
