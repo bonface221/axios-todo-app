@@ -84,14 +84,14 @@ const addTodo = () => {
 		// bodyField.value = "";
 		form.style.display = "none";
 		img.style.display = "block";
-		location.reload()
+		location.reload();
 	}
 };
 
 const editTodo = (itemId) => {
 	form.style.display = "block";
 	closeIcon.style.display = "block";
-	img.style.display = 'none';
+	img.style.display = "none";
 	addNewTodoButton.style.display = "none";
 	createTodoButton.style.display = "none";
 	updateTodoButton.style.display = "block";
@@ -122,7 +122,7 @@ const getTimeStamp = () => {
 
 const addNewTodo = () => {
 	form.style.display = "block";
-	img.style.display = 'none'
+	img.style.display = "none";
 	closeIcon.style.display = "block";
 	addNewTodoButton.style.display = "none";
 
@@ -132,14 +132,14 @@ const addNewTodo = () => {
 
 const deleteTodo = (itemId) => {
 	axios.delete(`http://localhost:8000/posts/${itemId}`);
-	location.reload()
+	location.reload();
 };
 const closeAll = () => {
 	form.style.display = "none";
-	img.style.display = 'block';
+	img.style.display = "block";
 	closeIcon.style.display = "none";
 	addNewTodoButton.style.display = "block";
-}
+};
 
 const updateTodo = () => {
 	const id = idField.value;
@@ -157,6 +157,7 @@ const updateTodo = () => {
 
 const markTodoAsComplete = (itemId) => {
 	axios.patch(`http://localhost:8000/posts/${itemId}`, { status: "Complete" });
+	location.reload()
 };
 
 todoList.addEventListener("click", (e) => {
