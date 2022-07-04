@@ -84,7 +84,7 @@ const addTodo = () => {
 		// bodyField.value = "";
 		form.style.display = "none";
 		img.style.display = "block";
-		displayAllTodos();
+		location.reload()
 	}
 };
 
@@ -132,7 +132,7 @@ const addNewTodo = () => {
 
 const deleteTodo = (itemId) => {
 	axios.delete(`http://localhost:8000/posts/${itemId}`);
-	displayAllTodos();
+	location.reload()
 };
 const closeAll = () => {
 	form.style.display = "none";
