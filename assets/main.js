@@ -82,6 +82,9 @@ const addTodo = () => {
 		idField.value = "";
 		timeField.value = "";
 		bodyField.value = "";
+		form.style.display = "none";
+		img.style.display = "block";
+		displayAllTodos();
 	}
 };
 
